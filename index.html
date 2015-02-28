@@ -42,16 +42,13 @@
 
         <script>
             $(document).ready(function() {
-                if (window.File && window.FileReader && window.FileList && window.Blob) {
-                    console.log("All File API's supported.");
-                } else {
+                if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
                     alert("Not all the File API's are supported by your browser!");
                 }
 
                 $("#proxy_form").submit(function(event) {
                     event.preventDefault();
                     var form = $("#proxy_form");
-                    console.log(form);
 
                     if (form[0][2].files) {
                         var file = form[0][2].files[0];
