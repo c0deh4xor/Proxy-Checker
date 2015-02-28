@@ -1,3 +1,10 @@
+/*
+ * Custom Bootstrap 3.0 theme.
+ * This theme mostly changes the appearence of buttons but it does some other things too.
+ * I originally made this theme for a different project but I liked it so I kept it - I know use this theme in most of my bootstrap themes.
+ * @author Lynxaa
+ */
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body {
     font-family: 'Open Sans', sans-serif;
@@ -166,7 +173,7 @@ nav {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    outline-style:none;/*IE*/
+    outline-style:none;
 }
 
 html {
