@@ -47,6 +47,8 @@ ProxyChecker.prototype.check = function() {
 
                 if (response.match("^ERR") || response.match("^Fatal")) { //Match all possible errors.
                     $("#results").append("<p class=\"proxy proxy-error\">" + response + "</p>");
+                } else if (response.length < 5) { //Empty responses, mostly caused by execution time being exceeded.
+
                 } else { //All successful proxies.
                     $("#results").append("<p class=\"proxy proxy-success\">" + response + "</p>");
                     working.push(response); //Push the working proxy to our working proxies array.

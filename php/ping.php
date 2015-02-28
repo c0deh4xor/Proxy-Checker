@@ -4,6 +4,12 @@
      * @since 28/02/2015
      */
 
+     /**
+      * Turn of error reporting.
+      * This should be default on any web server for safety reasons, so we'll turn it off in here to try get a similar response.
+      */
+     error_reporting(0);
+
     /**
      * Since single CURL requests aren't ASYNC we need to change the php-file execution time to improve speed.
      * We can safely assume any proxy taking longer than 5 seconds to load sites like google/wtfismyip/youtube/etc aren't good proxies or they don't work.
