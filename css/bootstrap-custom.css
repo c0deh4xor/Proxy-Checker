@@ -1,15 +1,80 @@
 /*
  * Custom Bootstrap 3.0 theme.
  * This theme mostly changes the appearence of buttons but it does some other things too.
- * I originally made this theme for a different project but I liked it so I kept it - I know use this theme in most of my bootstrap themes.
+ * I originally made this theme for a different project but I liked it so I kept it - I now use this theme in most of my bootstrap themes.
  * @author Lynxaa
  */
+
+ /* Normalization Override
+ ------------------------------------------------------------------- */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body {
     font-family: 'Open Sans', sans-serif;
     background: url("../img/bg.png");
 }
+
+body > .container {
+    padding: 74px 15px;
+}
+
+strong {
+    font-weight: 700;
+    text-shadow: 0px 1px 0px #fff;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+nav {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline-style:none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: black;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.2125em;
+}
+
+h1 {
+    font-size: 2.125em;
+}
+
+h2 {
+    font: 300 24px source-sans-pro, sans-serif;
+    margin-bottom: 25px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    color: #5a5a5c;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Form Override
+------------------------------------------------------------------- */
 
 .form-control {
     border-radius: 0;
@@ -24,6 +89,19 @@ body {
     border-color: #3276B1;
 }
 
+/* Button Override
+------------------------------------------------------------------- */
+
+.btn {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 -2px 0 rgba(0,0,0,.05);
+    -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 .btn:focus {
     outline: none;
     -webkit-box-shadow: none;
@@ -31,6 +109,8 @@ body {
     box-shadow: none;
 }
 
+/* ProxyChecker.js result styling
+------------------------------------------------------------------- */
 .proxy {
     margin: 0;
     padding: 0;
@@ -44,6 +124,8 @@ body {
     color: red;
 }
 
+/* Scrollable DIV styling.
+------------------------------------------------------------------- */
 .scrollable-y::-webkit-scrollbar {
     width: 10px;
 }
@@ -73,15 +155,8 @@ body {
     max-height: 300px;
 }
 
-.btn {
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    box-shadow: inset 0 -2px 0 rgba(0,0,0,.05);
-    -moz-box-shadow: inset 0 -2px 0 rgba(0,0,0,.05);
-    -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.15);
-}
+/* Panel Override
+------------------------------------------------------------------- */
 
 .panel {
     border-radius: 0px;
@@ -114,6 +189,10 @@ body {
     text-shadow: 0px 1px 0px #fff;
 }
 
+/* Last-Child margin fixes, makes the site more sleek
+ * and removes odd looking margins.
+------------------------------------------------------------------- */
+
 .form-group:last-child {
     margin-bottom: 0;
 }
@@ -122,19 +201,17 @@ table:last-child {
     margin-bottom: 0;
 }
 
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+/* Custom Stuff that Bootstrap 3.0 doesn't support.
+------------------------------------------------------------------- */
+
 .404 {
     margin-top: 20px;
     position: absolute;
     margin-left: 20px;
-}
-
-strong {
-    font-weight: 700;
-    text-shadow: 0px 1px 0px #fff;
-}
-
-a:hover {
-    cursor: pointer;
 }
 
 .input-group-addon {
@@ -164,33 +241,4 @@ select:focus {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-}
-
-nav {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    outline-style:none;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    min-height: 60px;
-    background-color: #f8f8f8;
-    border-top: 1px solid;
-    border-color: #e7e7e7;
-}
-
-body > .container {
-    padding: 74px 15px;
 }
