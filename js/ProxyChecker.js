@@ -62,7 +62,11 @@ ProxyChecker.prototype.check = function() {
                         workingString += working[i1] + "\n";
                     }
 
-                    download("proxies_checked_by_[site_name]-" + new Date().toJSON().substring(0,10) + ".txt", workingString);
+                    var dateObj = new Date($.now());
+                    var time = dateObj.toJSON().substring(11, 19);
+                    var date = dateObj.toJSON().substring(0, 10);
+                    var filename = "proxies-" + time + "_" + date + ".txt";
+                    createDownload(filename, workingString);
                     $("#download_working_proxies").fadeIn("fast");
                     $("#status").html("Finished - " + working.length + " working proxies.");
                 }
@@ -75,9 +79,8 @@ ProxyChecker.prototype.check = function() {
  * Creates a client-side file with the passed text.
  * @see http://stackoverflow.com/a/18197341
  */
-function download(filename, text) {
+function createDownload(filename, text) {
     $("#download_working_proxies").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     $("#download_working_proxies").attr('download', filename);
     $("#download_working_proxies").removeClass("hidden");
-    console.log("Generated download button.");
 }
