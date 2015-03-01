@@ -7,7 +7,6 @@
 
  /* Normalization Override
  ------------------------------------------------------------------- */
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body {
     font-family: 'Open Sans', sans-serif;
@@ -75,7 +74,6 @@ h6 {
 
 /* Form Override
 ------------------------------------------------------------------- */
-
 .form-control {
     border-radius: 0;
     outline: none;
@@ -91,7 +89,6 @@ h6 {
 
 /* Button Override
 ------------------------------------------------------------------- */
-
 .btn {
     border-radius: 0px;
     -webkit-border-radius: 0px;
@@ -157,7 +154,6 @@ h6 {
 
 /* Panel Override
 ------------------------------------------------------------------- */
-
 .panel {
     border-radius: 0px;
 }
@@ -192,7 +188,6 @@ h6 {
 /* Last-Child margin fixes, makes the site more sleek
  * and removes odd looking margins.
 ------------------------------------------------------------------- */
-
 .form-group:last-child {
     margin-bottom: 0;
 }
@@ -201,13 +196,8 @@ table:last-child {
     margin-bottom: 0;
 }
 
-.form-group:last-child {
-    margin-bottom: 0;
-}
-
 /* Custom Stuff that Bootstrap 3.0 doesn't support.
 ------------------------------------------------------------------- */
-
 .404 {
     margin-top: 20px;
     position: absolute;
