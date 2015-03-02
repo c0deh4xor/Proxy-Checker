@@ -10,7 +10,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body {
     font-family: 'Open Sans', sans-serif;
-    background: url("../../img/bg.png");
+    background: url("../img/bg.png");
 }
 
 body > .container {
